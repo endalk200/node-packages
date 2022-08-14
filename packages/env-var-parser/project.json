@@ -1,0 +1,34 @@
+{
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "packages/env-var-parser/src",
+    "projectType": "library",
+    "targets": {
+        "lint": {
+            "executor": "@nrwl/linter:eslint",
+            "outputs": ["{options.outputFile}"],
+            "options": {
+                "lintFilePatterns": ["packages/env-var-parser/**/*.ts"]
+            }
+        },
+        "test": {
+            "executor": "@nrwl/jest:jest",
+            "outputs": ["coverage/packages/env-var-parser"],
+            "options": {
+                "jestConfig": "packages/env-var-parser/jest.config.ts",
+                "passWithNoTests": true
+            }
+        },
+        "build": {
+            "executor": "@nrwl/js:tsc",
+            "outputs": ["{options.outputPath}"],
+            "options": {
+                "outputPath": "dist/packages/env-var-parser",
+                "tsConfig": "packages/env-var-parser/tsconfig.lib.json",
+                "packageJson": "packages/env-var-parser/package.json",
+                "main": "packages/env-var-parser/src/index.ts",
+                "assets": ["packages/env-var-parser/*.md"]
+            }
+        }
+    },
+    "tags": []
+}

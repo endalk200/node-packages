@@ -1,0 +1,21 @@
+{
+    "name": "env-var-parser",
+    "private": false,
+    "version": "0.0.1",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/endalk200/node-packages.git",
+        "directory": "packages/env-var-parser"
+    },
+    "author": "endalk200 <eb808826@gmail.com>",
+    "description": "A collection of hooks and utilities for React.",
+    "bugs": {
+        "url": "https://github.com/endalk200/node-packages/issues"
+    },
+    "homepage": "https://github.com/endalk200/node-packages/tree/main/packages/env-var-parser#readme",
+    "keywords": [
+        "env",
+        "environment variable",
+        "env-var-parser"
+    ]
+}
