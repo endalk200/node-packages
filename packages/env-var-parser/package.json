@@ -1,14 +1,14 @@
 {
     "name": "env-var-parser",
     "private": false,
-    "version": "0.0.1",
+    "version": "1.0.0",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/endalk200/node-packages.git",
         "directory": "packages/env-var-parser"
     },
     "author": "endalk200 <eb808826@gmail.com>",
-    "description": "A collection of hooks and utilities for React.",
+    "description": "`process.env` wrapper with type support.",
     "bugs": {
         "url": "https://github.com/endalk200/node-packages/issues"
     },
