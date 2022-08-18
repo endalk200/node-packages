@@ -25,7 +25,7 @@ jobs:
         run: npm ci
 
       - name: Lint the code
-        run: nx run env-var-parser:lint
+        run: npx nx run env-var-parser:lint
 
   Test:
     needs: [Lint]
@@ -47,4 +47,4 @@ jobs:
         run: npm ci
 
       - name: Lint the code
-        run: nx run env-var-parser:test
+        run: npx nx run env-var-parser:test
