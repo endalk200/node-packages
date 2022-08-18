@@ -3,11 +3,10 @@
  * the type T.
  * @param {string} key - The environment variable key.
  * @param {T} defaultValue - The default value to return if the environment variable is not set.
- * @returns A function that takes a string and a default value and returns a value of type T or
- * undefined.
+ * @returns environment variable with type support
  */
-export const parseEnv = <T>(key: string, defaultValue?: T): T | undefined => {
-    const value = process.env[key];
+export const parseEnv = <T>(key: string, defaultValue?: T) => {
+    const value: string | undefined = process.env[key];
 
     if (value) return value as unknown as T;
 
