@@ -1,12 +1,11 @@
 {
     "name": "node-packages",
-    "version": "0.0.1",
     "license": "MIT",
     "scripts": {
         "format:check": "prettier --check .",
         "format:write": "prettier --write .",
-        "lint": "nx run env-var-parser:lint",
-        "test": "nx run env-var-parser:test",
+        "lint:env-var-parser": "nx run env-var-parser:lint",
+        "test:env-var-parser": "nx run env-var-parser:test",
         "build": "nx run env-var-parser:build",
         "publish": "nx publish env-var-parser"
     },
