@@ -5,28 +5,46 @@
     "targets": {
         "lint": {
             "executor": "@nrwl/linter:eslint",
-            "outputs": ["{options.outputFile}"],
+            "outputs": [
+                "{options.outputFile}"
+            ],
             "options": {
-                "lintFilePatterns": ["packages/env-var-parser/**/*.ts"]
+                "lintFilePatterns": [
+                    "packages/env-var-parser/**/*.ts"
+                ]
             }
         },
         "test": {
             "executor": "@nrwl/jest:jest",
-            "outputs": ["coverage/packages/env-var-parser"],
+            "outputs": [
+                "coverage/packages/env-var-parser"
+            ],
             "options": {
+                "codeCoverage": true,
+                "coverageDirectory": "reports",
+                "coverageReporters": [
+                    "clover",
+                    "json",
+                    "lcov",
+                    "text"
+                ],
                 "jestConfig": "packages/env-var-parser/jest.config.ts",
                 "passWithNoTests": true
             }
         },
         "build": {
             "executor": "@nrwl/js:tsc",
-            "outputs": ["{options.outputPath}"],
+            "outputs": [
+                "{options.outputPath}"
+            ],
             "options": {
                 "outputPath": "dist/packages/env-var-parser",
                 "tsConfig": "packages/env-var-parser/tsconfig.lib.json",
                 "packageJson": "packages/env-var-parser/package.json",
                 "main": "packages/env-var-parser/src/index.ts",
-                "assets": ["packages/env-var-parser/*.md"]
+                "assets": [
+                    "packages/env-var-parser/*.md"
+                ]
             }
         }
     },
